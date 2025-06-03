@@ -15,6 +15,26 @@ body {
 ul {
   list-style-type: none;
 }
+@font-face {
+  font-family: 'Hylia';
+  src: url('fonts/Hylia.otf') format('opentype');
+}
+@font-face {
+  font-family: 'font2';
+  src: url('fonts/FlorensaDemoRegular-lgrX0.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'Kalpurush';
+  src: url('/fonts/Kalpurush.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'Nexabold';
+  src: url('fonts/NexaBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Bankgoth';
+  src: url('fonts/BankGthd.ttf') format('opentype');
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -83,7 +103,7 @@ ul {
 
 #menu-toggle:checked ~ .middle {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-0px);
 }
 
 #menu-toggle:checked ~ .bottom {
@@ -247,6 +267,49 @@ ul {
   text-decoration: none;
   color: white;
 }
+
+.donatetext {
+  color: #000;
+  text-align: center;
+  display: block;
+}
+.donatetext h1 {
+  font-size: 18px;
+  font-family: poppins;
+  margin: 30px;
+  margin-top: -180px;
+  z-index:3;
+  color: #ffff;
+  
+}
+.donatetext h3 {
+  font-size: 10px;
+  font-family: lato;
+  margin: 20px;
+  margin-top: -25px;
+  color: #ffff;
+  font-style: italic;
+  z-index: 3;
+}
+.donatebtn {
+  display: inline-block;
+  background: green;
+  text-decoration: none;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  animation: pulse 1.5s infinite;
+  z-index: 7;
+  margin-bottom: px;
+}
+.orphanimg {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+
     @keyframes scroll-left {
       0% {
         transform: translateX(0%);
@@ -254,7 +317,3 @@ ul {
       100% {
         transform: translateX(-100%);
       }
-
-/* RIGHT TO LEFT TEXT START */
-
-    
