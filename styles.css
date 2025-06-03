@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -12,29 +11,36 @@ body {
     background-color: #F5F5F5;
     padding-top: 70px;
 }
+
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
+
 @font-face {
-  font-family: 'Hylia';
-  src: url('fonts/Hylia.otf') format('opentype');
+    font-family: 'Hylia';
+    src: url('fonts/Hylia.otf') format('opentype');
 }
+
 @font-face {
-  font-family: 'font2';
-  src: url('fonts/FlorensaDemoRegular-lgrX0.ttf') format('opentype');
+    font-family: 'font2';
+    src: url('fonts/FlorensaDemoRegular-lgrX0.ttf') format('opentype');
 }
+
 @font-face {
-  font-family: 'Kalpurush';
-  src: url('/fonts/Kalpurush.ttf') format('opentype');
+    font-family: 'Kalpurush';
+    src: url('/fonts/Kalpurush.ttf') format('opentype');
 }
+
 @font-face {
-  font-family: 'Nexabold';
-  src: url('fonts/NexaBold.otf') format('opentype');
+    font-family: 'Nexabold';
+    src: url('fonts/NexaBold.otf') format('opentype');
 }
+
 @font-face {
-  font-family: 'Bankgoth';
-  src: url('fonts/BankGthd.ttf') format('opentype');
+    font-family: 'Bankgoth';
+    src: url('fonts/BankGthd.ttf') format('opentype');
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -124,10 +130,12 @@ ul {
     visibility: hidden;
     transition: all #ffff(--transition-speed) ease;
 }
+
 .navlogo {
-  margin-top: -10px;
-  margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
+
 .nav-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -193,8 +201,7 @@ ul {
 .nav-links.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
 .nav-links.active .nav-item:nth-child(5) { transition-delay: 0.5s; }
 
-/* NAV MENU END */
-/* WHATSAPP FLOAT START  */
+/* WHATSAPP FLOAT */
 .float-whatsapp {
     position: fixed;
     bottom: 30px;
@@ -207,8 +214,8 @@ ul {
     text-align: center;
     font-size: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999; /* Extremely high to ensure it's on top */
-    display: flex !important; /* Force display */
+    z-index: 9999;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -222,7 +229,7 @@ ul {
 }
 
 .float-whatsapp i {
-    line-height: 60px; /* Perfect vertical centering */
+    line-height: 60px;
 }
 
 @keyframes pulse {
@@ -244,76 +251,128 @@ ul {
         line-height: 50px;
     }
 }
-/* WHATSAPP FLOAT END  */
 
-/* RIGHT TO LEFT TEXT START */
+/* SCROLLING TEXT */
 .scroll-container {
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      background:#4682B4;
-      padding-bottom: 4px;
-    }
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #4682B4;
+    padding-bottom: 4px;
+}
 
-    .scroll-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 40s linear infinite;
-      font-size: 12px;
-      color: white;
-    }
+.scroll-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 40s linear infinite;
+    font-size: 12px;
+    color: white;
+}
+
 .scroll-text a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* DONATION SECTION - UPDATED */
+.donation {
+    position: relative;
+    width: 100%;
+}
+
+.orphanimg {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
 }
 
 .donatetext {
-  color: #000;
-  text-align: center;
-  display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    z-index: 3;
+    margin-top: -130px;
 }
+
 .donatetext h1 {
-  font-size: 18px;
-  font-family: poppins;
-  margin: 30px;
-  margin-top: -180px;
-  z-index:3;
-  color: #ffff;
-  
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    font-size: clamp(20px, 4vw, 42px);
+    line-height: 1.3;
 }
+
 .donatetext h3 {
-  font-size: 10px;
-  font-family: lato;
-  margin: 20px;
-  margin-top: -25px;
-  color: #ffff;
-  font-style: italic;
-  z-index: 3;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-bottom: 25px;
+    font-size: clamp(14px, 2.5vw, 22px);
+    line-height: 1.4;
+    margin-top: -10px;
 }
+
 .donatebtn {
-  display: inline-block;
-  background: green;
-  text-decoration: none;
-  color: white;
-  padding: 5px 30px;
-  border-radius: 30px;
-  font-size: 15px;
-  animation: pulse 1.5s infinite;
-  z-index: 7;
-  margin-bottom: px;
-}
-.orphanimg {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
+    display: inline-block;
+    background: #008000;
+    background: linear-gradient(to bottom, #008000, #006400);
+    color: white;
+    padding: 10px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 20px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+    border: none;
+    cursor: pointer;
+    margin-top:-140px;
 }
 
+.donatebtn:hover {
+    background: linear-gradient(to bottom, #006400, #004d00);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
 
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+/* Desktop adjustments */
+@media (min-width: 768px) {
+    .donatetext {
+        padding: 30px;
+    }
+    .donatetext h1 {
+        margin-bottom: 20px;
+    }
+    .donatetext h3 {
+        margin-bottom: 30px;
+    }
+    .donatebtn {
+        padding: 15px 40px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .donatetext {
+        width: 80%;
+    }
+}
