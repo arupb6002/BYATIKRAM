@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind Byatikram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Reset and base styles - KEPT YOUR ORIGINAL HEADER STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #F5F5F5;
+            padding-top: 70px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        /* NAVIGATION - KEPT YOUR ORIGINAL */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background-color: #004d00;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 70px;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-top: 7px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+        
+        .hamburger-menu {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            width: 32px;
+            height: 24px;
+            z-index: 1001;
+        }
+        
+        #menu-toggle {
+            display: none;
+        }
+        
+        .bar {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            left: 0;
+        }
+        
+        .bar.top {
+            top: 0;
+        }
+        
+        .bar.middle {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .bar.bottom {
+            bottom: 0;
+        }
+        
+        #menu-toggle:checked ~ .top {
+            transform: translateY(10px) rotate(45deg);
+            background: #fff;
+        }
+        
+        #menu-toggle:checked ~ .middle {
+            opacity: 0;
+            transform: translateX(-0px);
+        }
+        
+        #menu-toggle:checked ~ .bottom {
+            transform: translateY(-10px) rotate(-45deg);
+            background: #fff;
+        }
+        
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .navlogo {
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .nav-links {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 75%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: #212121;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 30px 30px;
+            transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+            z-index: 999;
+        }
+        
+        .nav-links.active {
+            right: 0;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 12px 0;
+            margin-left: 20px;
+            display: block;
+            position: relative;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links.active .nav-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: red;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-item:hover::after {
+            width: 40px;
+        }
+        
+        .nav-links.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
+        .nav-links.active .nav-item:nth-child(2) { transition-delay: 0.2s; }
+        .nav-links.active .nav-item:nth-child(3) { transition-delay: 0.3s; }
+        .nav-links.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
+        .nav-links.active .nav-item:nth-child(5) { transition-delay: 0.5s; }
+        
+        /* HEADING STYLES */
+        .heading {
+            text-align: center;
+            padding: 30px 20px 20px;
+            color: #333;
+        }
+        
+        .heading h4 {
+            font-family: 'Kalpurush', sans-serif;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .heading p {
+            font-size: 16px;
+            color: #666;
+        }
+        
+/* MEMBERS GRID - STRICT 2 COLUMN LAYOUT */
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+    gap: 15px;
+    max-width: 600px; /* Adjusted for 2 columns */
+    margin: 0 auto;
+    padding: 0 15px 30px;
+}
+
+.member-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 0;
+    object-fit: cover;
+    margin: 0 auto 10px;
+    display: block;
+    border: 1px solid #aaa;
+}
+
+.member-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #222;
+    font-family: 'Kalpurush', sans-serif;
+}
+
+.member-position {
+    font-size: 13px;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile view - keep 2 columns but adjust spacing */
+@media (max-width: 480px) {
+    .members-container {
+        gap: 10px;
+        padding: 0 10px 20px;
+    }
+    
+    .member-card {
+        padding: 10px;
+    }
+    
+    .member-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+            
+            .member-photo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Byatikram Logo">
+        </div>
+        
+        <label class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+        </label>
+        
+        <div class="nav-overlay" id="navOverlay"></div>
+        
+        <ul class="nav-links" id="navLinks">
+            <img src="logo.png" class="navlogo" alt="Byatikram Logo">
+            
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="unavailable.html" class="nav-item">About</a></li>
+            <li><a href="members.html" class="nav-item">Behind Byatikram</a></li>
+            <li><a href="unavailable.html" class="nav-item">Donate</a></li>
+            <li><a href="unavailable.html" class="nav-item">Gallery</a></li>
+        </ul>
+    </nav>
+    
+    <div class="heading">
+        <h4>ব্যতিক্ৰম ফাউণ্ডেশ্যনৰ আৰৰ সদস্যসকল</h4>
+        <p>The members Behind Byatikram Foundation</p>
+    </div>
+    
+    <div class="members-container">
+        <!-- MEMBER 1 -->
+        <div class="member-card">
+            <img src="/Members/ruhini.jpg" alt="Ruhini Baruah" class="member-photo">
+            <div class="member-name">Ruhini Kr. Baruah</div>
+            <div class="member-position">General Secretary</div>
+        </div>
+        
+        <!-- MEMBER 2 -->
+        <div class="member-card">
+            <img src="/Members/arup.jpg" alt="Arup Borah" class="member-photo">
+            <div class="member-name">Arup Borah</div>
+            <div class="member-position">Organizational Joint Secretary</div>
+        </div>
+        
+        <!-- MEMBER 3 -->
+        <div class="member-card">
+            <img src="/Members/latu.jpg" alt="Latu Moni" class="member-photo">
+            <div class="member-name">Latu Moni Konwar</div>
+            <div class="member-position">Organizational Joint Secretary</div>
+        </div>
+        
+        <!-- MEMBER 4 -->
+        <div class="member-card">
+            <img src="/Members/example.jpg" alt="Member Name" class="member-photo">
+            <div class="member-name">Member Name</div>
+            <div class="member-position">Position</div>
+        </div>
+        
+        <!-- Add more members as needed -->
+    </div>
+    
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+        
+        menuToggle.addEventListener('change', function() {
+            if(this.checked) {
+                navLinks.classList.add('active');
+                navOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                navLinks.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking on overlay
+        navOverlay.addEventListener('click', function() {
+            menuToggle.checked = false;
+            navLinks.classList.remove('active');
+            this.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    </script>
+</body>
+</html>
