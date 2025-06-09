@@ -15,7 +15,26 @@ body {
 ul {
     list-style-type: none;
 }
-
+@font-face {
+  font-family: 'Hylia';
+  src: url('fonts/Hylia.otf') format('opentype');
+}
+@font-face {
+  font-family: 'flora';
+  src: url('fonts/FlorensaDemoRegular-lgrX0.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'Kalpurush';
+  src: url('/fonts/Kalpurush.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'Nexabold';
+  src: url('fonts/NexaBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'gumona';
+  src: url('fonts/Gumona DEMO.otf') format('opentype');
+}
 /* NAVIGATION - KEPT ORIGINAL */
 .navbar {
     display: flex;
@@ -223,17 +242,15 @@ ul {
 
 .about h1 {
     font-size: 18px;
-    font-family: 'Lato';
+    font-family: 'Roboto';
     margin-bottom: 15px;
     margin-left: 10px;
 }
 .line {
-  border: 0px solid red;
-  width: 30%;
+  border: 0px solid #004d00;
+  width: 50%;
   height: 2px;
-  background-color:red;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  background-color:#004d00;
   margin: 0 auto;
 }
 
@@ -326,23 +343,28 @@ ul {
 
 /* CONTACT SECTION - FIXED VISIBILITY */
 .contact {
-    background: #004d00;
-    color: white;
+    background: #f5fff5;
+    color: #111;
     padding: 20px;
     margin-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 .contact h1 {
-    font-size: 13px;
-    margin-left: 10px;
+    font-size: 20px;
     margin-bottom: 10px;
+    font-family: Roboto;
+    font-weight: 200;
     
 }
 
 .contact h3 {
-    margin-left: 10px;
-    font-size: 10px;
+    margin-top: 10px;
+    font-size: 15px;
     line-height: 1.6;
+    font-family: Roboto;
+    font-weight: 300;
 }
 
 /* FOOTER - FIXED VISIBILITY */
@@ -351,15 +373,18 @@ ul {
     color: white;
     text-align: center;
     padding: 20px 0px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 8px;
+    font-family: s;
+    font-family: Poppins  ;
+    font-weight: 50;
+    font-size: 10px;
     
 }
 
 .footer a {
     color: #fff;
-    font-weight: 500;
     text-decoration: none;
+    font-weight: 50;
+    font-size: 10px;
 }
 
 /* WHATSAPP BUTTON - KEPT ORIGINAL */
@@ -410,4 +435,101 @@ ul {
     .donatebtn {
         margin-top: 0;
     }
+}
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  color: white;
+  font-family: gumona;
+  text-align: left;
+  font-size: 35px;
+  left: 20px; /* Consistent left margin */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  width: calc(100% - 40px); /* Prevents overflow */
+}
+
+.banner-text .main-heading {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.banner-text .sub-heading {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.banner-text .caption {
+  display: block;
+  font-family: Lato;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .banner-text {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5vw;
+    left: 5%;
+  }
+  
+  .banner-text .main-heading {
+    font-size: 8vw;
+  }
+  
+  .banner-text .sub-heading {
+    font-size: 8vw;
+     margin-top: -6vw;
+    color:#FFD700 ;
+  }
+  
+  .banner-text .caption {
+    font-size: 2vw;
+    margin-top: -4vw;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .banner-image {
+    width: auto;
+    height: 300px;
+    margin-left: -20%;
+  }
+  
+  .banner-text {
+    top: 30%;
+    font-size: 8vw;
+    left: 20px;
+    padding-right: 20px;
+  }
+  
+  .banner-text .main-heading {
+    font-size: 40px;
+  }
+  
+  .banner-text .sub-heading {
+    font-size: 9vw;
+    margin-top: -7vw;
+    color:#FFD700 ;
+  }
+  
+  .banner-text .caption {
+    font-size: 3vw;
+    margin-top: -5vw;
+  }
 }
