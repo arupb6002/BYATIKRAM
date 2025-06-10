@@ -533,3 +533,11 @@ ul {
     margin-top: -5vw;
   }
 }
+.more a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 14px;
+  background: green;
+  padding: 5px;
+}
