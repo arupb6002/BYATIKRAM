@@ -239,7 +239,53 @@ ul {
   margin-bottom: 10px;
   color: white; /* optional: match your theme */
 }
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  box-shadow: 0 8px 16px rgba(0, 1, 2, 0.40);
+  border-radius: 10px;
+  margin-top: 20px;
+  flex-direction: column;
+  border: 0.5px solid green;
+  background-color:#F0FFFF ;
+}
 
+.socialhand {
+  text-align: center;
+  padding: 20px;
+}
+
+.socialhand img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.texts h1 {
+  margin: 5px 0;
+  font-family: gumona;
+  color: #007912;
+  font-size: 40px;
+  margin-top: -7px;
+}
+
+.texts h3 {
+  color: #101812;
+  font-size: 15px;
+  margin-top: 1px;
+  font-family: Poppins;
+}
+
+.container .line {
+  border: 0;
+  width: 50%;
+  height: 4px;
+  background-color: #004d00;
+  margin: 0 auto;
+  border-radius: 30px;
+}
 .about h1 {
     font-size: 18px;
     font-family: 'Roboto';
@@ -540,4 +586,5 @@ ul {
   font-size: 14px;
   background: green;
   padding: 5px;
+}
 }
