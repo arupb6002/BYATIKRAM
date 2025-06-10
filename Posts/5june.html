@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byatikram - Orphan Donation Initiative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Container for content below slideshow */
+        .content-container {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .content-heading {
+            color: #2e7d32; /* Darker green for better contrast */
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+      .content-heading b {
+        color: red;
+        
+      }
+        .content-text {
+            color: black; /* Darker red for better readability */
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        /* Slideshow at the top */
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 450px;
+            object-fit: cover;
+        }
+
+        /* Floating rounded buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: none;
+            border-radius: 50%;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .prev:hover, .next:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        /* Dot indicators */
+        .dots {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: #2e7d32;
+        }
+
+        @media (max-width: 600px) {
+            .content-heading {
+                font-size: 20px;
+            }
+            
+            .content-text {
+                font-size: 14px;
+            }
+            
+            .prev, .next {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slideshow Container (Top) -->
+    <div class="slideshow-container">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="https://i.ibb.co/d4HBmqQH/Picsart-25-06-01-12-35-33-863.jpg" alt="Byatikram team serving meals to orphans">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="https://i.ibb.co/ZzfgqDLf/Picsart-25-06-01-12-34-23-657.jpg" alt="Community volunteers working with children">
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="https://i.ibb.co/TM1zy9cS/Picsart-25-06-01-12-35-52-149.jpg" alt="Children receiving meals from Byatikram initiative">
+            </div>
+        </div>
+        
+        <!-- Navigation Buttons (Floating) -->
+        <button class="prev" onclick="moveSlide(-1)" aria-label="Previous slide">❮</button>
+        <button class="next" onclick="moveSlide(1)" aria-label="Next slide">❯</button>
+    </div>
+    
+    <!-- Dot indicators -->
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <h2 class="content-heading">Planting Hope, Nurturing Tomorrow:<br><b>"Byatikram’s Green Mission with NDRF"</b>
+</h2>
+        <p class="content-text">On the occasion of World Environment Day, Byatikram Foundation proudly joined hands with the courageous NDRF team in a powerful initiative to nurture nature and secure a sustainable future. With the theme, “If there are trees, there is life,” the event highlighted the vital role of greenery in our survival. Each sapling planted is not just a plant—it is a promise, a symbol of hope for a cleaner, greener, and healthier tomorrow. The presence of NDRF ASI Maneshwar Deuri as the Chief Guest added great significance to the occasion, inspiring everyone with his commitment to both human safety and environmental protection. At Byatikram, we believe that planting trees is only the beginning; the true mission lies in protecting and preserving them. Because when we save the environment, we ultimately save ourselves. Let this be a call to action for all—let’s not just celebrate World Environment Day, let’s live it every day through conscious care for our planet.
+</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        const dots = document.querySelectorAll('.dot');
+        let slideInterval;
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDots();
+            resetInterval();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDots();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+        }
+
+        // Start auto-slide
+        resetInterval();
+        
+        // Pause on hover
+        document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        document.querySelector('.slideshow-container').addEventListener('mouseleave', resetInterval);
+    </script>
+</body>
+</html>
