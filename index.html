@@ -1,110 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Byatikram</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <!-- Force Desktop View on Mobile -->
+  <meta name="viewport" content="width=1024">
+  <title>Byatikram - Social Initiative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Times+New+Roman&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      background-color: #fff;
+      display: flex;
+      padding: 20px;
+    }
+
+    .image {
+      flex: 0 0 120px;
+      margin-right: 20px;
+    }
+
+    .image img {
+      width: 120px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #eee;
+    }
+
+    .content {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .content h1 {
+      color: #c62828;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn a {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: #2e7d32;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .btn a:hover {
+      background-color: #1b5e20;
+    }
+  </style>
 </head>
 <body>
-<header>
-<div>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="Byatikram Logo">
-        </div>
-        
-        <label class="hamburger-menu">
-            <input type="checkbox" id="menu-toggle">
-            <span class="bar top"></span>
-            <span class="bar middle"></span>
-            <span class="bar bottom"></span>
-        </label>
-        
-        <div class="nav-overlay" id="navOverlay"></div>
-        
-        <ul class="nav-links" id="navLinks">
-           <img src="logo.png" class="navlogo" alt="Byatikram Logo">
-           
-            <li><a href="index.html" class="nav-item">Home</a></li>
-            <li><a href="unavailable.html" class="nav-item">About</a></li>
-            <li><a href="members.html" class="nav-item">Behind Byatikram</a></li>
-            <li><a href="unavailable.html" class="nav-item">Donate</a></li>
-            <li><a href="unavailable.html" class="nav-item">Gallery</a></li>
-        </ul>
-    </nav>
-</div>
-</header>
- <div class="scroll-container">
-    <div class="scroll-text">
-<a href="mailto:byatikramfoundation@gmail.com"><b><Email: byatikramfoundation@gmail.com</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="Instagram.com/byatikramfoundation.in">Instagram: @byatikramfoundation.in</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="Facebook.com/buatikram">Facebook: Byatikram Foundation</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="mailto:byatikramfoundation@gmail.com">Email: byatikramfoundation@gmail.com</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="Instagram.com/byatikramfoundation.in">Instagram: @byatikramfoundation.in</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="Facebook.com/byatikram">Facebook: Byatikram Foundation</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•
+  <div class="container">
+    <div class="image">
+      <img src="https://i.ibb.co/7N8sPDSr/Apurba-Sarma.jpg" alt="Byatikram Donation Event">
     </div>
-    </div>
-
-<div class="banner-container">
-  <img src="banner1.jpg" alt="SOCIAL EMPOWERMENT BOOST" class="banner-image">
-  <div class="banner-text">
-    <span class="main-heading">ONE EARTH, ONE MISSION :</span></span>
-    <span class="sub-heading">SUSTAINABILITY</span>
-    <span class="caption">Tree Plantation Program | World Environment Day 2025
-</span>
-  </div>
-</div>
-
-    <div class="about">
-          <i class="fa fa-help"></i>
-      <h1>About Byatikram</h1>
-      <hr class="line">
-      <h3>Byatikram Foundation is a non-governmental organization (NGO) that is committed to catalyzing social change through creative thinking and participative action. Guided by progressive values, the foundation operates in fields ranging from education to culture, creative development to community welfare.<p>Dedicated to questioning traditional boundaries, Byatikram dreams of a society where everyone is empowered, every voice heard, and every initiative results in long-term impact.</p></h3>
-    </div>
-    
-  
-    
-    <!--===== COMTAINER STARTS ======-->
-    <div>
-      <img src="orphan.jpg" class="orphanimg" alt="Children Image"></div>
-<div class="donation">
-  <div class="donatetext">
-    <h1>Your small help today can become someone’s reason to smile forever.</h1>
-    <h3>Your donation is not just money, it’s a message: <strong>You matter.</strong></h3>
-    
-        <a href="https://wa.me/916002148763?text=Hello%20Byatikram%20Foundation%2C%20I%20would%20like%20to%20offer%20a%20small%20donation%20to%20support%20your%20initiatives.%20Please%20share%20the%20donation%20details.%20Thank%20you." class="donatebtn">
-  Donate</a>
+    <div class="content">
+      <h1>"Planting Hope, Nurturing Tomorrow: Byatikram’s Green Mission with NDRF"</h1>
+      <p>
+        On the occasion of World Environment Day, Byatikram Foundation proudly joined hands with the courageous NDRF team in a powerful initiative to nurture nature and secure a sustainable future.
+      </p>
+      <div class="btn">
+        <a href="next.html">Read More</a>
       </div>
     </div>
-    <!--===== COMTAINER ENDS ======-->
-
-<div class="contact">
-  <h1><b>Contact Us</b></h1>
-        <hr class="line">
-  <h3>Byatikram Foundation<br>
-  Phakum Komar Phodia, Sivasagar<br>
-  Konwarpur Sivasagar Assam 785667<br>
-  byatikramfoundation@gmail.com<br>
-  +916002189078/+916002148763</h3>
-</div>
-
-<footer class="footer">
-  Copyright 2025 Byatikram Foundation , All Rights Reserved<br>
-  <a href="https://wa.me/+916002148763" target="_blank">Designed By Borah Digital Solutions</a>
-</footer>
-
-<!-- WhatsApp Float Button -->
-<div>
-<a href="https://wa.me/+916002148763" class="float-whatsapp" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp"></i>
-</a>
-</div>
-<script src="script.js"></script>
-</body>
+  </div>
 </body>
 </html>
