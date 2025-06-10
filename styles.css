@@ -286,33 +286,13 @@ ul {
   margin: 0 auto;
   border-radius: 30px;
 }
-.about h1 {
-    font-size: 18px;
-    font-family: 'Roboto';
-    margin-bottom: 15px;
-    margin-left: 10px;
-}
+
 .line {
   border: 0px solid #004d00;
   width: 50%;
   height: 2px;
   background-color:#004d00;
   margin: 0 auto;
-}
-
-.about h3 {
-    font-size: 11px;
-    margin-top: 20px;
-    margin-left: 10px!important;
-    margin-right: 10px!important;
-    font-family: Poppins;
-  
-    
-}
-.about p{
-  
-  margin-top: 5px;
-  margin-right: 10px;
 }
 
 /* DONATION SECTION - FIXED VISIBILITY */
